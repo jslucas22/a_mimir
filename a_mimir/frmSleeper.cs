@@ -199,12 +199,6 @@ namespace a_mimir
                 lblNomePrograma.Text = "A mimir";
             }
         }
-
-        private void txtHoras_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void dark_theme()
         {
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
