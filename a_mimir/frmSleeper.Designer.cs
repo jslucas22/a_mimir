@@ -150,7 +150,7 @@
             this.txtSegundos.Depth = 0;
             this.txtSegundos.Hint = "";
             this.txtSegundos.Location = new System.Drawing.Point(121, 203);
-            this.txtSegundos.MaxLength = 6;
+            this.txtSegundos.MaxLength = 2;
             this.txtSegundos.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSegundos.Name = "txtSegundos";
             this.txtSegundos.PasswordChar = '\0';
@@ -168,7 +168,7 @@
             this.txtMinutos.Depth = 0;
             this.txtMinutos.Hint = "";
             this.txtMinutos.Location = new System.Drawing.Point(121, 149);
-            this.txtMinutos.MaxLength = 4;
+            this.txtMinutos.MaxLength = 2;
             this.txtMinutos.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtMinutos.Name = "txtMinutos";
             this.txtMinutos.PasswordChar = '\0';

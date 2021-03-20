@@ -15,6 +15,7 @@ namespace a_mimir
     {
         TimeSpan tempoRestante;
         bool iniciaTimer = true;
+        int horas, minutos, segundos;
         public frmSleeper()
         {
             InitializeComponent();
@@ -39,6 +40,54 @@ namespace a_mimir
             Application.Exit();
         }
 
+        void checagem()
+        {
+            //---------------------------------------------------------------------
+
+            _ = txtHoras.Text.Count() == 0 ? txtHoras.Text = "0" : "";
+            _ = txtMinutos.Text.Count() == 0 ? txtMinutos.Text = "0" : "";
+            _ = txtSegundos.Text.Count() == 0 ? txtSegundos.Text = "0" : "";
+
+            //---------------------------------------------------------------------
+        }
+        void incremento()
+        {
+            //---------------------------------------------------------------------
+
+            horas = Convert.ToInt32(txtHoras.Text);
+            minutos = Convert.ToInt32(txtMinutos.Text);
+            segundos = Convert.ToInt32(txtSegundos.Text);
+
+            if (horas != 0)
+            {
+                horas += horas;
+                txtHoras.Text = horas.ToString();
+
+                if (horas >= 24)
+                    horas -= 1;
+                    txtHoras.Text = 23.ToString();
+
+            }
+
+            if (minutos != 0)
+            {
+                minutos += minutos;
+                txtMinutos.Text = minutos.ToString();
+
+                if (minutos >= 59)
+                    txtMinutos.Text = 59.ToString();
+            }
+
+            if (segundos != 0)
+            {
+                segundos += segundos;
+                txtSegundos.Text = segundos.ToString();
+
+                if (segundos >= 59)
+                    txtSegundos.Text = 59.ToString();
+            }
+        }
+
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -46,6 +95,9 @@ namespace a_mimir
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            checagem();
+            incremento();
+
             if (radioDesligar.Checked == false && radioReiniciar.Checked == false && radioBloquear.Checked == false && radioHibernar.Checked == false)
             {
                 MessageBox.Show("Selecione uma ação para exercer!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -53,13 +105,12 @@ namespace a_mimir
 
             else
             {
-                verificaCampos();
-
+ 
                 tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
 
                 if (iniciaTimer == true)
                 {
-                    tmrAcao.Start();
+                    tmrAcao.Start();                    
                     lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
                 }
             }
@@ -73,30 +124,23 @@ namespace a_mimir
 
         private void txtHoras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != 08;
             _ = txtHoras.Text == "Horas" ? txtHoras.Text = "" : "";
         }
 
         private void txtMinutos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != 08;
             _ = txtMinutos.Text == "Minutos" ? txtMinutos.Text = "" : "";
         }
 
         private void txtSegundos_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != 08;
             _ = txtSegundos.Text == "Segundos" ? txtSegundos.Text = "" : "";
         }
 
-        private void verificaCampos()
-        {
-            _ = txtHoras.Text.Count() == 0 ? txtHoras.Text = "0" : "";
-            _ = txtMinutos.Text.Count() == 0 ? txtMinutos.Text = "0" : "";
-            _ = txtSegundos.Text.Count() == 0 ? txtSegundos.Text = "0" : "";
-        }
-
-        private void tmrAcao_Tick(object sender, EventArgs e)
+                private void tmrAcao_Tick(object sender, EventArgs e)
         {
             tempoRestante = tempoRestante.Subtract(TimeSpan.FromSeconds(1));
             lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
@@ -122,7 +166,7 @@ namespace a_mimir
 
         private void btnNightMode_Click(object sender, EventArgs e)
         {
-           
+
             if (lblNomePrograma.Text == "A mimir")
             {
                 dark_theme();
@@ -130,14 +174,14 @@ namespace a_mimir
                 btnNightMode.Image = Properties.Resources.sun_60px;
                 lblNomePrograma.Text = "A mimir | zZzZzZz";
             }
-          
-                        
+
+
             else if (lblNomePrograma.Text == "A mimir | zZzZzZz")
             {
                 light_theme();
                 btnNightMode.Image = Properties.Resources.night;
                 lblNomePrograma.Text = "A mimir";
-            }            
+            }
         }
 
         private void dark_theme()
