@@ -454,9 +454,9 @@
             this.Controls.Add(this.pnlPai);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmSleeper";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A mimir zZzZ";
             this.Load += new System.EventHandler(this.frmSleeper_Load);

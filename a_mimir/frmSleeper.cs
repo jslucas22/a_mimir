@@ -94,7 +94,6 @@ namespace a_mimir
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             checagem();
-            incremento();
 
             if (rbDesligar.Checked == false && rbReiniciar.Checked == false && rbLogoff.Checked == false && rbHinernar.Checked == false)
             {
@@ -103,12 +102,14 @@ namespace a_mimir
 
             else
             {
-
                 tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
 
                 if (iniciaTimer == true)
                 {
+                    incremento();
+
                     tmrAcao.Start();
+                    
                     lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
                 }
             }
