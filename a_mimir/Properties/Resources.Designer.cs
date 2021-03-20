@@ -83,16 +83,6 @@ namespace a_mimir.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sun {
-            get {
-                object obj = ResourceManager.GetObject("sun", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sun_60px {
             get {
                 object obj = ResourceManager.GetObject("sun_60px", resourceCulture);

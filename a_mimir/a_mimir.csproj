@@ -106,9 +106,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\light_dimming_off_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\new_moon_128px.png" />
   </ItemGroup>
   <ItemGroup>
