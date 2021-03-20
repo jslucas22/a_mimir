@@ -159,9 +159,9 @@ namespace a_mimir
             if (rbReiniciar.Checked == true)
                 Process.Start("CMD.exe", @"/C" + "shutdown -t 0 -r");
             if (rbLogoff.Checked == true)
-                Process.Start("CMD.exe", "/C" + "shutdown -t 0 -l");
+                Process.Start("shutdown", "/l");
             if (rbHinernar.Checked == true)
-                Process.Start("CMD.exe", "/C" + "shutdown -t 0 -h");
+                Process.Start("shutdown", "/h");
         }
 
         private void btnNightMode_Click(object sender, EventArgs e)
