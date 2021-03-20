@@ -65,7 +65,7 @@ namespace a_mimir
 
                 if (horas >= 24)
                     horas -= 1;
-                    txtHoras.Text = 23.ToString();
+                txtHoras.Text = 23.ToString();
 
             }
 
@@ -98,19 +98,19 @@ namespace a_mimir
             checagem();
             incremento();
 
-            if (radioDesligar.Checked == false && radioReiniciar.Checked == false && radioBloquear.Checked == false && radioHibernar.Checked == false)
+            if (rbDesligar.Checked == false && rbReiniciar.Checked == false && rbLogoff.Checked == false && rbHinernar.Checked == false)
             {
                 MessageBox.Show("Selecione uma ação para exercer!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
- 
+
                 tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
 
                 if (iniciaTimer == true)
                 {
-                    tmrAcao.Start();                    
+                    tmrAcao.Start();
                     lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
                 }
             }
@@ -140,7 +140,7 @@ namespace a_mimir
             _ = txtSegundos.Text == "Segundos" ? txtSegundos.Text = "" : "";
         }
 
-                private void tmrAcao_Tick(object sender, EventArgs e)
+        private void tmrAcao_Tick(object sender, EventArgs e)
         {
             tempoRestante = tempoRestante.Subtract(TimeSpan.FromSeconds(1));
             lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
@@ -154,14 +154,14 @@ namespace a_mimir
 
         private void executar_acao()
         {
-            if (radioDesligar.Checked == true)
-                Process.Start("shutdown", "/s");
-            if (radioReiniciar.Checked == true)
-                Process.Start("shutdown", "/r");
-            if (radioBloquear.Checked == true)
-                Process.Start("shutdown", "/l");
-            if (radioHibernar.Checked == true)
-                Process.Start("shutdown", "/h");
+            if (rbDesligar.Checked == true)
+                Process.Start("CMD.exe", @"/C " + "shutdown -t 0 -s");
+            if (rbReiniciar.Checked == true)
+                Process.Start("CMD.exe", @"/C" + "shutdown -t 0 -r");
+            if (rbLogoff.Checked == true)
+                Process.Start("CMD.exe", "/C" + "shutdown -t 0 -l");
+            if (rbHinernar.Checked == true)
+                Process.Start("CMD.exe", "/C" + "shutdown -t 0 -h");
         }
 
         private void btnNightMode_Click(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace a_mimir
             {
                 dark_theme();
 
-                btnNightMode.Image = Properties.Resources.sun_60px;
+                btnAlteraTema.Image = Properties.Resources.sun_60px;
                 lblNomePrograma.Text = "A mimir | zZzZzZz";
             }
 
@@ -179,7 +179,7 @@ namespace a_mimir
             else if (lblNomePrograma.Text == "A mimir | zZzZzZz")
             {
                 light_theme();
-                btnNightMode.Image = Properties.Resources.night;
+                btnAlteraTema.Image = Properties.Resources.night;
                 lblNomePrograma.Text = "A mimir";
             }
         }
@@ -214,10 +214,10 @@ namespace a_mimir
             lblTimer.ForeColor = Color.FromArgb(255, 245, 245, 245);
             lblNomePrograma.ForeColor = Color.FromArgb(255, 245, 245, 245);
 
-            radioDesligar.ForeColor = Color.FromArgb(255, 245, 245, 245);
-            radioReiniciar.ForeColor = Color.FromArgb(255, 245, 245, 245);
-            radioBloquear.ForeColor = Color.FromArgb(255, 245, 245, 245);
-            radioHibernar.ForeColor = Color.FromArgb(255, 245, 245, 245);
+            rbDesligar.ForeColor = Color.FromArgb(255, 245, 245, 245);
+            rbReiniciar.ForeColor = Color.FromArgb(255, 245, 245, 245);
+            rbLogoff.ForeColor = Color.FromArgb(255, 245, 245, 245);
+            rbHinernar.ForeColor = Color.FromArgb(255, 245, 245, 245);
 
             btnIniciar.BackgroundColor = Color.FromArgb(255, 33, 49, 79);
             btnParar.BackgroundColor = Color.FromArgb(255, 110, 28, 28);
@@ -251,10 +251,10 @@ namespace a_mimir
             lblTimer.ForeColor = Color.FromArgb(255, 32, 32, 32);
             lblNomePrograma.ForeColor = Color.WhiteSmoke;
 
-            radioDesligar.ForeColor = Color.FromArgb(255, 32, 32, 32);
-            radioReiniciar.ForeColor = Color.FromArgb(255, 32, 32, 32);
-            radioBloquear.ForeColor = Color.FromArgb(255, 32, 32, 32);
-            radioHibernar.ForeColor = Color.FromArgb(255, 32, 32, 32);
+            rbDesligar.ForeColor = Color.FromArgb(255, 32, 32, 32);
+            rbReiniciar.ForeColor = Color.FromArgb(255, 32, 32, 32);
+            rbLogoff.ForeColor = Color.FromArgb(255, 32, 32, 32);
+            rbHinernar.ForeColor = Color.FromArgb(255, 32, 32, 32);
 
             btnIniciar.BackgroundColor = Color.CornflowerBlue;
 

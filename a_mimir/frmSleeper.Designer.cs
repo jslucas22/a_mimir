@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSleeper));
             this.pnlPai = new Bunifu.Framework.UI.BunifuCards();
-            this.btnNightMode = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAlteraTema = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblSegundos = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblMinutos = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblHoras = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSegundos = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtMinutos = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtHoras = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.radioHibernar = new XanderUI.XUIRadio();
+            this.rbHinernar = new XanderUI.XUIRadio();
             this.btnParar = new XanderUI.XUIButton();
             this.btnIniciar = new XanderUI.XUIButton();
             this.lblTimer = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,9 +48,9 @@
             this.pnlDivisorTempo = new System.Windows.Forms.Panel();
             this.lblTemporizador = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlLinhaAcao = new System.Windows.Forms.Panel();
-            this.radioBloquear = new XanderUI.XUIRadio();
-            this.radioReiniciar = new XanderUI.XUIRadio();
-            this.radioDesligar = new XanderUI.XUIRadio();
+            this.rbLogoff = new XanderUI.XUIRadio();
+            this.rbReiniciar = new XanderUI.XUIRadio();
+            this.rbDesligar = new XanderUI.XUIRadio();
             this.lblAcao = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlDivisor = new System.Windows.Forms.Panel();
             this.elipseErmSleeper = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -61,7 +61,7 @@
             this.controlHead = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.tmrAcao = new System.Windows.Forms.Timer(this.components);
             this.pnlPai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNightMode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlteraTema)).BeginInit();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -73,14 +73,14 @@
             this.pnlPai.BorderRadius = 5;
             this.pnlPai.BottomSahddow = true;
             this.pnlPai.color = System.Drawing.Color.DodgerBlue;
-            this.pnlPai.Controls.Add(this.btnNightMode);
+            this.pnlPai.Controls.Add(this.btnAlteraTema);
             this.pnlPai.Controls.Add(this.lblSegundos);
             this.pnlPai.Controls.Add(this.lblMinutos);
             this.pnlPai.Controls.Add(this.lblHoras);
             this.pnlPai.Controls.Add(this.txtSegundos);
             this.pnlPai.Controls.Add(this.txtMinutos);
             this.pnlPai.Controls.Add(this.txtHoras);
-            this.pnlPai.Controls.Add(this.radioHibernar);
+            this.pnlPai.Controls.Add(this.rbHinernar);
             this.pnlPai.Controls.Add(this.btnParar);
             this.pnlPai.Controls.Add(this.btnIniciar);
             this.pnlPai.Controls.Add(this.lblTimer);
@@ -90,9 +90,9 @@
             this.pnlPai.Controls.Add(this.pnlDivisorTempo);
             this.pnlPai.Controls.Add(this.lblTemporizador);
             this.pnlPai.Controls.Add(this.pnlLinhaAcao);
-            this.pnlPai.Controls.Add(this.radioBloquear);
-            this.pnlPai.Controls.Add(this.radioReiniciar);
-            this.pnlPai.Controls.Add(this.radioDesligar);
+            this.pnlPai.Controls.Add(this.rbLogoff);
+            this.pnlPai.Controls.Add(this.rbReiniciar);
+            this.pnlPai.Controls.Add(this.rbDesligar);
             this.pnlPai.Controls.Add(this.lblAcao);
             this.pnlPai.Controls.Add(this.pnlDivisor);
             this.pnlPai.LeftSahddow = false;
@@ -103,20 +103,20 @@
             this.pnlPai.Size = new System.Drawing.Size(482, 252);
             this.pnlPai.TabIndex = 0;
             // 
-            // btnNightMode
+            // btnAlteraTema
             // 
-            this.btnNightMode.BackColor = System.Drawing.Color.Transparent;
-            this.btnNightMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNightMode.Image = global::a_mimir.Properties.Resources.night;
-            this.btnNightMode.ImageActive = null;
-            this.btnNightMode.Location = new System.Drawing.Point(435, 203);
-            this.btnNightMode.Name = "btnNightMode";
-            this.btnNightMode.Size = new System.Drawing.Size(32, 32);
-            this.btnNightMode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNightMode.TabIndex = 23;
-            this.btnNightMode.TabStop = false;
-            this.btnNightMode.Zoom = 10;
-            this.btnNightMode.Click += new System.EventHandler(this.btnNightMode_Click);
+            this.btnAlteraTema.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlteraTema.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlteraTema.Image = global::a_mimir.Properties.Resources.night;
+            this.btnAlteraTema.ImageActive = null;
+            this.btnAlteraTema.Location = new System.Drawing.Point(435, 203);
+            this.btnAlteraTema.Name = "btnAlteraTema";
+            this.btnAlteraTema.Size = new System.Drawing.Size(32, 32);
+            this.btnAlteraTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAlteraTema.TabIndex = 23;
+            this.btnAlteraTema.TabStop = false;
+            this.btnAlteraTema.Zoom = 10;
+            this.btnAlteraTema.Click += new System.EventHandler(this.btnNightMode_Click);
             // 
             // lblSegundos
             // 
@@ -199,18 +199,18 @@
             this.txtHoras.UseSystemPasswordChar = false;
             this.txtHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoras_KeyPress);
             // 
-            // radioHibernar
+            // rbHinernar
             // 
-            this.radioHibernar.Checked = false;
-            this.radioHibernar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.radioHibernar.Location = new System.Drawing.Point(12, 171);
-            this.radioHibernar.Name = "radioHibernar";
-            this.radioHibernar.RadioColor = System.Drawing.Color.CornflowerBlue;
-            this.radioHibernar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
-            this.radioHibernar.RadioStyle = XanderUI.XUIRadio.Style.Material;
-            this.radioHibernar.Size = new System.Drawing.Size(72, 15);
-            this.radioHibernar.TabIndex = 3;
-            this.radioHibernar.Text = "Hibernar";
+            this.rbHinernar.Checked = false;
+            this.rbHinernar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.rbHinernar.Location = new System.Drawing.Point(12, 171);
+            this.rbHinernar.Name = "rbHinernar";
+            this.rbHinernar.RadioColor = System.Drawing.Color.CornflowerBlue;
+            this.rbHinernar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
+            this.rbHinernar.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.rbHinernar.Size = new System.Drawing.Size(72, 15);
+            this.rbHinernar.TabIndex = 3;
+            this.rbHinernar.Text = "Hibernar";
             // 
             // btnParar
             // 
@@ -317,44 +317,44 @@
             this.pnlLinhaAcao.Size = new System.Drawing.Size(99, 2);
             this.pnlLinhaAcao.TabIndex = 6;
             // 
-            // radioBloquear
+            // rbLogoff
             // 
-            this.radioBloquear.Checked = false;
-            this.radioBloquear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.radioBloquear.Location = new System.Drawing.Point(12, 145);
-            this.radioBloquear.Name = "radioBloquear";
-            this.radioBloquear.RadioColor = System.Drawing.Color.CornflowerBlue;
-            this.radioBloquear.RadioHoverColor = System.Drawing.Color.RoyalBlue;
-            this.radioBloquear.RadioStyle = XanderUI.XUIRadio.Style.Material;
-            this.radioBloquear.Size = new System.Drawing.Size(72, 15);
-            this.radioBloquear.TabIndex = 2;
-            this.radioBloquear.Text = "Logoff";
+            this.rbLogoff.Checked = false;
+            this.rbLogoff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.rbLogoff.Location = new System.Drawing.Point(12, 145);
+            this.rbLogoff.Name = "rbLogoff";
+            this.rbLogoff.RadioColor = System.Drawing.Color.CornflowerBlue;
+            this.rbLogoff.RadioHoverColor = System.Drawing.Color.RoyalBlue;
+            this.rbLogoff.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.rbLogoff.Size = new System.Drawing.Size(72, 15);
+            this.rbLogoff.TabIndex = 2;
+            this.rbLogoff.Text = "Logoff";
             // 
-            // radioReiniciar
+            // rbReiniciar
             // 
-            this.radioReiniciar.Checked = false;
-            this.radioReiniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.radioReiniciar.Location = new System.Drawing.Point(12, 119);
-            this.radioReiniciar.Name = "radioReiniciar";
-            this.radioReiniciar.RadioColor = System.Drawing.Color.CornflowerBlue;
-            this.radioReiniciar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
-            this.radioReiniciar.RadioStyle = XanderUI.XUIRadio.Style.Material;
-            this.radioReiniciar.Size = new System.Drawing.Size(72, 15);
-            this.radioReiniciar.TabIndex = 1;
-            this.radioReiniciar.Text = "Reiniciar";
+            this.rbReiniciar.Checked = false;
+            this.rbReiniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.rbReiniciar.Location = new System.Drawing.Point(12, 119);
+            this.rbReiniciar.Name = "rbReiniciar";
+            this.rbReiniciar.RadioColor = System.Drawing.Color.CornflowerBlue;
+            this.rbReiniciar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
+            this.rbReiniciar.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.rbReiniciar.Size = new System.Drawing.Size(72, 15);
+            this.rbReiniciar.TabIndex = 1;
+            this.rbReiniciar.Text = "Reiniciar";
             // 
-            // radioDesligar
+            // rbDesligar
             // 
-            this.radioDesligar.Checked = false;
-            this.radioDesligar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.radioDesligar.Location = new System.Drawing.Point(13, 93);
-            this.radioDesligar.Name = "radioDesligar";
-            this.radioDesligar.RadioColor = System.Drawing.Color.CornflowerBlue;
-            this.radioDesligar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
-            this.radioDesligar.RadioStyle = XanderUI.XUIRadio.Style.Material;
-            this.radioDesligar.Size = new System.Drawing.Size(72, 15);
-            this.radioDesligar.TabIndex = 0;
-            this.radioDesligar.Text = "Desligar";
+            this.rbDesligar.Checked = false;
+            this.rbDesligar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.rbDesligar.Location = new System.Drawing.Point(13, 93);
+            this.rbDesligar.Name = "rbDesligar";
+            this.rbDesligar.RadioColor = System.Drawing.Color.CornflowerBlue;
+            this.rbDesligar.RadioHoverColor = System.Drawing.Color.RoyalBlue;
+            this.rbDesligar.RadioStyle = XanderUI.XUIRadio.Style.Material;
+            this.rbDesligar.Size = new System.Drawing.Size(72, 15);
+            this.rbDesligar.TabIndex = 0;
+            this.rbDesligar.Text = "Desligar";
             // 
             // lblAcao
             // 
@@ -462,7 +462,7 @@
             this.Load += new System.EventHandler(this.frmSleeper_Load);
             this.pnlPai.ResumeLayout(false);
             this.pnlPai.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNightMode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlteraTema)).EndInit();
             this.pnlHead.ResumeLayout(false);
             this.pnlHead.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -476,10 +476,10 @@
         private Bunifu.Framework.UI.BunifuCards pnlPai;
         private Bunifu.Framework.UI.BunifuElipse elipseErmSleeper;
         private System.Windows.Forms.Panel pnlDivisor;
-        private XanderUI.XUIRadio radioDesligar;
+        private XanderUI.XUIRadio rbDesligar;
         private Bunifu.Framework.UI.BunifuCustomLabel lblAcao;
-        private XanderUI.XUIRadio radioBloquear;
-        private XanderUI.XUIRadio radioReiniciar;
+        private XanderUI.XUIRadio rbLogoff;
+        private XanderUI.XUIRadio rbReiniciar;
         private System.Windows.Forms.Panel pnlLinhaAcao;
         private Bunifu.Framework.UI.BunifuCustomLabel lblTemporizador;
         private System.Windows.Forms.Panel pnlDivisorTempo;
@@ -489,7 +489,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblTimer;
         private XanderUI.XUIButton btnIniciar;
         private XanderUI.XUIButton btnParar;
-        private XanderUI.XUIRadio radioHibernar;
+        private XanderUI.XUIRadio rbHinernar;
         private System.Windows.Forms.Panel pnlHead;
         private Bunifu.Framework.UI.BunifuCustomLabel lblNomePrograma;
         private Bunifu.Framework.UI.BunifuImageButton btnFechar;
@@ -502,7 +502,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblHoras;
         private Bunifu.Framework.UI.BunifuCustomLabel lblSegundos;
         private Bunifu.Framework.UI.BunifuCustomLabel lblMinutos;
-        private Bunifu.Framework.UI.BunifuImageButton btnNightMode;
+        private Bunifu.Framework.UI.BunifuImageButton btnAlteraTema;
     }
 }
 
