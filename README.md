@@ -1,6 +1,6 @@
  # 😴 A MIMIR 😴
  
- ![](a_mimir/Resources/a_mimir.gif)
+ ![](a_mimir/Resources/software_in_action.gif)
  
  ## Oque é isso ? 🤔
  
