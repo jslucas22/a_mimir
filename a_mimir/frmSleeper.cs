@@ -64,9 +64,7 @@ namespace a_mimir
                 txtHoras.Text = horas.ToString();
 
                 if (horas >= 24)
-                    horas -= 1;
-                txtHoras.Text = 23.ToString();
-
+                    txtHoras.Text = 23.ToString();
             }
 
             if (minutos != 0)
