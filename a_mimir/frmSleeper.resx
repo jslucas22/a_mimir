@@ -121,6 +121,20 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAChJREFUOE9j
+        GAXDCvz//98BiBuIxA5QbQgAEkRThA9jGjAKhi5gYAAAJwRSuaFF4tIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE/N
+        kkEKgCAQRT1CrQrqzBmGWrpoV4suWQMjGdoouKgHgvP1f8ZB9h/EvPDR2gbLV6SULdzF8kYpVU/a7IPW
+        HUoBwtpeaLNxvlYoPaFCkmZHLATMoCXNDj8EFuxBw+M8YKBXywesnOEGFAX4bVODjRJ7c3YINbBkCGV2
+        kCHFX/kjGDsB0UyDPt+LpbAAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAADAE
@@ -214,20 +228,6 @@
         Sh+0eFAztHhQM7R4UDO0eFAzs4BNCv////+H///hh///4YAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
         AAGEIAABgAAAAYAAAAGAAAADgAAAB4QgAA+H////h////4f///+H////h/4//4//f////7j///47////
         /f////7B///4b/////f////7/////f///+H/////
-</value>
-  </data>
-  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAChJREFUOE9j
-        GAXDCvz//98BiBuIxA5QbQgAEkRThA9jGjAKhi5gYAAAJwRSuaFF4tIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE/N
-        kkEKgCAQRT1CrQrqzBmGWrpoV4suWQMjGdoouKgHgvP1f8ZB9h/EvPDR2gbLV6SULdzF8kYpVU/a7IPW
-        HUoBwtpeaLNxvlYoPaFCkmZHLATMoCXNDj8EFuxBw+M8YKBXywesnOEGFAX4bVODjRJ7c3YINbBkCGV2
-        kCHFX/kjGDsB0UyDPt+LpbAAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="controlHead.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -48,23 +48,34 @@ namespace a_mimir
             _ = txtMinutos.Text.Count() == 0 ? txtMinutos.Text = "0" : "";
             _ = txtSegundos.Text.Count() == 0 ? txtSegundos.Text = "0" : "";
 
-            //---------------------------------------------------------------------
-        }
-        void incremento()
-        {
-            //---------------------------------------------------------------------
-
             horas = Convert.ToInt32(txtHoras.Text);
             minutos = Convert.ToInt32(txtMinutos.Text);
             segundos = Convert.ToInt32(txtSegundos.Text);
+
+            //---------------------------------------------------------------------
+        }
+
+        void verifica_valor_maximo()
+        {
+            _ = horas > 23 ? txtHoras.Text = "23" : "0";
+            _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
+            _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
+        }
+
+        void incremento()
+        {
+            //---------------------------------------------------------------------
 
             if (horas != 0)
             {
                 horas += horas;
                 txtHoras.Text = horas.ToString();
+              
 
                 if (horas >= 24)
+                {
                     txtHoras.Text = 23.ToString();
+                }
             }
 
             if (minutos != 0)
@@ -73,7 +84,9 @@ namespace a_mimir
                 txtMinutos.Text = minutos.ToString();
 
                 if (minutos >= 59)
+                {
                     txtMinutos.Text = 59.ToString();
+                }
             }
 
             if (segundos != 0)
@@ -82,7 +95,9 @@ namespace a_mimir
                 txtSegundos.Text = segundos.ToString();
 
                 if (segundos >= 59)
+                {
                     txtSegundos.Text = 59.ToString();
+                }
             }
         }
 
@@ -95,6 +110,8 @@ namespace a_mimir
         {
             checagem();
 
+            verifica_valor_maximo();
+
             if (rbDesligar.Checked == false && rbReiniciar.Checked == false && rbLogoff.Checked == false && rbHinernar.Checked == false)
             {
                 MessageBox.Show("Selecione uma ação para exercer!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -106,11 +123,11 @@ namespace a_mimir
 
                 if (iniciaTimer == true)
                 {
-                    incremento();
-
                     tmrAcao.Start();
-                    
+
                     lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
+
+                    incremento();
                 }
             }
         }
@@ -181,6 +198,11 @@ namespace a_mimir
                 btnAlteraTema.Image = Properties.Resources.night;
                 lblNomePrograma.Text = "A mimir";
             }
+        }
+
+        private void txtHoras_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
 
         private void dark_theme()

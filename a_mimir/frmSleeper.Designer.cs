@@ -198,6 +198,7 @@
             this.txtHoras.TabStop = false;
             this.txtHoras.UseSystemPasswordChar = false;
             this.txtHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoras_KeyPress);
+            this.txtHoras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtHoras_MouseClick);
             // 
             // rbHinernar
             // 
