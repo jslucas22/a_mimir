@@ -1,5 +1,7 @@
  # 😴 A MIMIR 😴
  
+ ![](a_mimir/Resources/a_mimir.gif)
+ 
  ## Oque é isso ? 🤔
  
  O "A mimir", foi um software desenvolvido para aqueles que 
@@ -32,4 +34,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-![](a_mimir/Resources/a_mimir.gif)
+
