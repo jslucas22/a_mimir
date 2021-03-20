@@ -4,11 +4,12 @@
  
  ## Oque é isso ? 🤔
  
- O "A mimir", foi um software desenvolvido para aqueles que 
- ao ir dormir deixam o computador ligado com um filme, sons de chuva, entre outros.
+ O "A mimir", é um software destinado para aqueles que</br>
+ ao ir dormirem, deixam seus computadores ligados com</br>
+ um filme, música etc.
  
- O que o "A mimir" faz é executar uma ação selecionada pelo usuário em um determinado 
- período de tempo (horas : minutos : segundos ) 
+ O que o "A mimir" faz é executar uma ação selecionada</br>
+ pelo usuário em um determinado período de tempo (horas : minutos : segundos ) 
  
  # Licença 📃
  ```
