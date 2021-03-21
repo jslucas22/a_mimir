@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8_sleeping_in_bed.ico</ApplicationIcon>
+    <ApplicationIcon>bed.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
@@ -115,6 +115,7 @@
     <None Include="Resources\sun_60px.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bed.ico" />
     <Content Include="icons8_pillow.ico" />
     <Content Include="icons8_sleeping_in_bed.ico" />
   </ItemGroup>

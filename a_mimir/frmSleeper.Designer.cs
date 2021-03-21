@@ -60,11 +60,17 @@
             this.lblNomePrograma = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.controlHead = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.tmrAcao = new System.Windows.Forms.Timer(this.components);
+            this.icoNotificacao = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cmMenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmExecutaAcao = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmCanceleAcao = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmFechar = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAlteraTema)).BeginInit();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            this.cmMenuNotificacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPai
@@ -102,6 +108,7 @@
             this.pnlPai.ShadowDepth = 20;
             this.pnlPai.Size = new System.Drawing.Size(482, 252);
             this.pnlPai.TabIndex = 0;
+            this.pnlPai.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPai_Paint);
             // 
             // btnAlteraTema
             // 
@@ -444,6 +451,43 @@
             this.tmrAcao.Interval = 1000;
             this.tmrAcao.Tick += new System.EventHandler(this.tmrAcao_Tick);
             // 
+            // icoNotificacao
+            // 
+            this.icoNotificacao.ContextMenuStrip = this.cmMenuNotificacoes;
+            this.icoNotificacao.Icon = ((System.Drawing.Icon)(resources.GetObject("icoNotificacao.Icon")));
+            this.icoNotificacao.Text = "A mimir";
+            this.icoNotificacao.Click += new System.EventHandler(this.icoNotificacao_Click);
+            // 
+            // cmMenuNotificacoes
+            // 
+            this.cmMenuNotificacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmExecutaAcao,
+            this.cmCanceleAcao,
+            this.cmFechar});
+            this.cmMenuNotificacoes.Name = "cmMenuNotificacoes";
+            this.cmMenuNotificacoes.Size = new System.Drawing.Size(233, 70);
+            // 
+            // cmExecutaAcao
+            // 
+            this.cmExecutaAcao.Name = "cmExecutaAcao";
+            this.cmExecutaAcao.Size = new System.Drawing.Size(232, 22);
+            this.cmExecutaAcao.Text = "Executar Ação Imediatamente";
+            this.cmExecutaAcao.Click += new System.EventHandler(this.cmExecutaAcao_Click);
+            // 
+            // cmCanceleAcao
+            // 
+            this.cmCanceleAcao.Name = "cmCanceleAcao";
+            this.cmCanceleAcao.Size = new System.Drawing.Size(232, 22);
+            this.cmCanceleAcao.Text = "Cancelar Ação";
+            this.cmCanceleAcao.Click += new System.EventHandler(this.cmCanceleAcao_Click);
+            // 
+            // cmFechar
+            // 
+            this.cmFechar.Name = "cmFechar";
+            this.cmFechar.Size = new System.Drawing.Size(232, 22);
+            this.cmFechar.Text = "Fechar";
+            this.cmFechar.Click += new System.EventHandler(this.cmFechar_Click);
+            // 
             // frmSleeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +504,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A mimir zZzZ";
             this.Load += new System.EventHandler(this.frmSleeper_Load);
+            this.Move += new System.EventHandler(this.frmSleeper_Move);
             this.pnlPai.ResumeLayout(false);
             this.pnlPai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAlteraTema)).EndInit();
@@ -467,6 +512,7 @@
             this.pnlHead.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
+            this.cmMenuNotificacoes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -503,6 +549,11 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblSegundos;
         private Bunifu.Framework.UI.BunifuCustomLabel lblMinutos;
         private Bunifu.Framework.UI.BunifuImageButton btnAlteraTema;
+        private System.Windows.Forms.NotifyIcon icoNotificacao;
+        private System.Windows.Forms.ContextMenuStrip cmMenuNotificacoes;
+        private System.Windows.Forms.ToolStripMenuItem cmExecutaAcao;
+        private System.Windows.Forms.ToolStripMenuItem cmCanceleAcao;
+        private System.Windows.Forms.ToolStripMenuItem cmFechar;
     }
 }
 

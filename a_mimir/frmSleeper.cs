@@ -37,7 +37,7 @@ namespace a_mimir
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            WindowState = FormWindowState.Minimized;
         }
 
         void checagem()
@@ -70,7 +70,7 @@ namespace a_mimir
             {
                 horas += horas;
                 txtHoras.Text = horas.ToString();
-              
+
 
                 if (horas >= 24)
                 {
@@ -103,7 +103,7 @@ namespace a_mimir
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -189,16 +189,66 @@ namespace a_mimir
 
                 btnAlteraTema.Image = Properties.Resources.sun_60px;
                 lblNomePrograma.Text = "A mimir | zZzZzZz";
+                icoNotificacao.Text = lblNomePrograma.Text;
             }
 
 
             else if (lblNomePrograma.Text == "A mimir | zZzZzZz")
             {
                 light_theme();
+
                 btnAlteraTema.Image = Properties.Resources.night;
                 lblNomePrograma.Text = "A mimir";
+                icoNotificacao.Text = lblNomePrograma.Text;
             }
         }
+
+        private void cmFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cmCanceleAcao_Click(object sender, EventArgs e)
+        {
+            tmrAcao.Stop();
+            lblTimer.Text = "00:00:00";
+        }
+
+        private void cmExecutaAcao_Click(object sender, EventArgs e)
+        {
+            tmrAcao.Stop();
+            lblTimer.Text = "00:00:00";
+            executar_acao();
+        }
+
+        private void frmSleeper_Move(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                icoNotificacao.Visible = true;
+                icoNotificacao.ShowBalloonTip(1000, "Note:", "O programa foi minimizado e está sendo executado em segundo plano", ToolTipIcon.Info);
+            }
+            else
+            {
+                icoNotificacao.Visible = false;
+            }
+
+            if (tempoRestante.Minutes == 5)
+                icoNotificacao.ShowBalloonTip(100, "Aviso!", "Em 5 minutos a ação selecionada será executada!", ToolTipIcon.Warning);
+        }
+
+        private void icoNotificacao_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            Show();
+        }
+
+        private void pnlPai_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void dark_theme()
         {
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
@@ -248,6 +298,8 @@ namespace a_mimir
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
+
+            //--------------------------------------------------------------------------
 
             pnlPai.BackColor = Color.FromArgb(255, 255, 255, 255);
             pnlPai.color = Color.DodgerBlue;
