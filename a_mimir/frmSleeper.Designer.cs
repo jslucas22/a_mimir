@@ -108,7 +108,6 @@
             this.pnlPai.ShadowDepth = 20;
             this.pnlPai.Size = new System.Drawing.Size(482, 252);
             this.pnlPai.TabIndex = 0;
-            this.pnlPai.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPai_Paint);
             // 
             // btnAlteraTema
             // 
@@ -456,7 +455,7 @@
             this.icoNotificacao.ContextMenuStrip = this.cmMenuNotificacoes;
             this.icoNotificacao.Icon = ((System.Drawing.Icon)(resources.GetObject("icoNotificacao.Icon")));
             this.icoNotificacao.Text = "A mimir";
-            this.icoNotificacao.Click += new System.EventHandler(this.icoNotificacao_Click);
+            this.icoNotificacao.MouseDown += new System.Windows.Forms.MouseEventHandler(this.icoNotificacao_MouseDown);
             // 
             // cmMenuNotificacoes
             // 

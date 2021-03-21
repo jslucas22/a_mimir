@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
+
 namespace a_mimir
 {
     public partial class frmSleeper : Form
@@ -238,15 +239,13 @@ namespace a_mimir
                 icoNotificacao.ShowBalloonTip(100, "Aviso!", "Em 5 minutos a ação selecionada será executada!", ToolTipIcon.Warning);
         }
 
-        private void icoNotificacao_Click(object sender, EventArgs e)
+        private void icoNotificacao_MouseDown(object sender, MouseEventArgs e)
         {
-            WindowState = FormWindowState.Normal;
-            Show();
-        }
-
-        private void pnlPai_Paint(object sender, PaintEventArgs e)
-        {
-
+            if ((Control.MouseButtons & MouseButtons.Left) != 0)
+            {
+                Show();
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         private void dark_theme()
