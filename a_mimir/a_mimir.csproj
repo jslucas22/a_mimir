@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Temas.cs" />
     <Compile Include="frmSleeper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Classes\Temas.resx">
+      <DependentUpon>Temas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSleeper.resx">
       <DependentUpon>frmSleeper.cs</DependentUpon>
     </EmbeddedResource>

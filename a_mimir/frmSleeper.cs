@@ -17,18 +17,38 @@ namespace a_mimir
         TimeSpan tempoRestante;
         bool iniciaTimer = true;
         int horas, minutos, segundos;
+        List<XanderUI.XUIRadio> lstRadio = new List<XanderUI.XUIRadio>();
         public frmSleeper()
         {
             InitializeComponent();
+            light_theme();
 
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme
-            (
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
-            );
+            //----------------------------------------------------------------------------
+
+            lstRadio.Add(rbDesligar);
+            lstRadio.Add(rbReiniciar);
+            lstRadio.Add(rbLogoff);
+            lstRadio.Add(rbHinernar);
+        }
+
+        public void alterar_tema()
+        {
+            if (lblNomePrograma.Text == "A mimir")
+            {
+                dark_theme();
+
+                btnAlteraTema.Image = Properties.Resources.sun_60px;
+                lblNomePrograma.Text = "A mimir | zZzZzZz";
+                icoNotificacao.Text = lblNomePrograma.Text;
+            } 
+            else
+            {
+                light_theme();
+
+                btnAlteraTema.Image = Properties.Resources.night;
+                lblNomePrograma.Text = "A mimir";
+                icoNotificacao.Text = lblNomePrograma.Text;
+            }
         }
 
         private void frmSleeper_Load(object sender, EventArgs e)
@@ -53,15 +73,16 @@ namespace a_mimir
             minutos = Convert.ToInt32(txtMinutos.Text);
             segundos = Convert.ToInt32(txtSegundos.Text);
 
-            //---------------------------------------------------------------------
-        }
 
-        void verifica_valor_maximo()
-        {
+            //---------------------------------------------------------------------
+
             _ = horas > 23 ? txtHoras.Text = "23" : "0";
             _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
             _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
+
+            //---------------------------------------------------------------------
         }
+
 
         void incremento()
         {
@@ -109,26 +130,23 @@ namespace a_mimir
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            checagem();
 
-            verifica_valor_maximo();
-
-            if (rbDesligar.Checked == false && rbReiniciar.Checked == false && rbLogoff.Checked == false && rbHinernar.Checked == false)
+            foreach (XanderUI.XUIRadio rb in lstRadio)
             {
-                MessageBox.Show("Selecione uma ação para exercer!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else
-            {
-                tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
-
-                if (iniciaTimer == true)
+                if (rb.Checked)
                 {
-                    tmrAcao.Start();
+                    checagem();
 
-                    lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
+                    tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
 
-                    incremento();
+                    if (iniciaTimer == true)
+                    {
+                        tmrAcao.Start();
+
+                        lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
+
+                        incremento();
+                    }
                 }
             }
         }
@@ -183,25 +201,7 @@ namespace a_mimir
 
         private void btnNightMode_Click(object sender, EventArgs e)
         {
-
-            if (lblNomePrograma.Text == "A mimir")
-            {
-                dark_theme();
-
-                btnAlteraTema.Image = Properties.Resources.sun_60px;
-                lblNomePrograma.Text = "A mimir | zZzZzZz";
-                icoNotificacao.Text = lblNomePrograma.Text;
-            }
-
-
-            else if (lblNomePrograma.Text == "A mimir | zZzZzZz")
-            {
-                light_theme();
-
-                btnAlteraTema.Image = Properties.Resources.night;
-                lblNomePrograma.Text = "A mimir";
-                icoNotificacao.Text = lblNomePrograma.Text;
-            }
+            alterar_tema();
         }
 
         private void cmFechar_Click(object sender, EventArgs e)
@@ -248,7 +248,7 @@ namespace a_mimir
             }
         }
 
-        private void dark_theme()
+        public void dark_theme()
         {
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -287,7 +287,7 @@ namespace a_mimir
             btnParar.BackgroundColor = Color.FromArgb(255, 110, 28, 28);
         }
 
-        void light_theme()
+        public void light_theme()
         {
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
