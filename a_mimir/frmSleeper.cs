@@ -15,9 +15,9 @@ namespace a_mimir
     public partial class frmSleeper : Form
     {
         TimeSpan tempoRestante;
-        bool iniciaTimer = true;
         int horas, minutos, segundos;
         List<XanderUI.XUIRadio> lstRadio = new List<XanderUI.XUIRadio>();
+
         public frmSleeper()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace a_mimir
                 btnAlteraTema.Image = Properties.Resources.sun_60px;
                 lblNomePrograma.Text = "A mimir | zZzZzZz";
                 icoNotificacao.Text = lblNomePrograma.Text;
-            } 
+            }
             else
             {
                 light_theme();
@@ -49,11 +49,6 @@ namespace a_mimir
                 lblNomePrograma.Text = "A mimir";
                 icoNotificacao.Text = lblNomePrograma.Text;
             }
-        }
-
-        private void frmSleeper_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -138,15 +133,9 @@ namespace a_mimir
                     checagem();
 
                     tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
-
-                    if (iniciaTimer == true)
-                    {
-                        tmrAcao.Start();
-
-                        lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
-
-                        incremento();
-                    }
+                    tmrAcao.Start();
+                    lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
+                    incremento();
                 }
             }
         }
@@ -250,9 +239,9 @@ namespace a_mimir
 
         public void dark_theme()
         {
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme
+            MaterialSkinManager MSM = MaterialSkinManager.Instance;
+            MSM.Theme = MaterialSkinManager.Themes.DARK;
+            MSM.ColorScheme = new ColorScheme
             (
                 Primary.Blue400, Primary.Blue500,
                 Primary.Blue500, Accent.LightBlue200,
@@ -289,9 +278,9 @@ namespace a_mimir
 
         public void light_theme()
         {
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme
+            MaterialSkinManager MSM = MaterialSkinManager.Instance;
+            MSM.Theme = MaterialSkinManager.Themes.LIGHT;
+            MSM.ColorScheme = new ColorScheme
             (
                 Primary.Blue400, Primary.Blue500,
                 Primary.Blue500, Accent.LightBlue200,
