@@ -58,8 +58,6 @@ namespace a_mimir
 
         void checagem()
         {
-            //---------------------------------------------------------------------
-
             _ = txtHoras.Text.Count() == 0 ? txtHoras.Text = "0" : "";
             _ = txtMinutos.Text.Count() == 0 ? txtMinutos.Text = "0" : "";
             _ = txtSegundos.Text.Count() == 0 ? txtSegundos.Text = "0" : "";
@@ -68,55 +66,13 @@ namespace a_mimir
             minutos = Convert.ToInt32(txtMinutos.Text);
             segundos = Convert.ToInt32(txtSegundos.Text);
 
-
-            //---------------------------------------------------------------------
-
             _ = horas > 23 ? txtHoras.Text = "23" : "0";
             _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
             _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
 
-            //---------------------------------------------------------------------
         }
 
 
-        void incremento()
-        {
-            //---------------------------------------------------------------------
-
-            if (horas != 0)
-            {
-                horas += horas;
-                txtHoras.Text = horas.ToString();
-
-
-                if (horas >= 24)
-                {
-                    txtHoras.Text = 23.ToString();
-                }
-            }
-
-            if (minutos != 0)
-            {
-                minutos += minutos;
-                txtMinutos.Text = minutos.ToString();
-
-                if (minutos >= 59)
-                {
-                    txtMinutos.Text = 59.ToString();
-                }
-            }
-
-            if (segundos != 0)
-            {
-                segundos += segundos;
-                txtSegundos.Text = segundos.ToString();
-
-                if (segundos >= 59)
-                {
-                    txtSegundos.Text = 59.ToString();
-                }
-            }
-        }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -125,7 +81,6 @@ namespace a_mimir
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-
             foreach (XanderUI.XUIRadio rb in lstRadio)
             {
                 if (rb.Checked)
@@ -135,7 +90,6 @@ namespace a_mimir
                     tempoRestante = new TimeSpan(Convert.ToInt32(txtHoras.Text), Convert.ToInt32(txtMinutos.Text), Convert.ToInt32(txtSegundos.Text));
                     tmrAcao.Start();
                     lblTimer.Text = tempoRestante.ToString(@"hh\:mm\:ss");
-                    incremento();
                 }
             }
         }
@@ -257,6 +211,8 @@ namespace a_mimir
             pnlLinhaTempo.BackColor = Color.FromArgb(36, 85, 109, 143);
             pnlDivisor.BackColor = Color.FromArgb(36, 85, 109, 143);
             pnlDivisorTempo.BackColor = Color.FromArgb(36, 85, 109, 143);
+            btnIniciar.BackgroundColor = Color.FromArgb(255, 33, 49, 79);
+            btnParar.BackgroundColor = Color.FromArgb(255, 110, 28, 28);
 
             lblAcao.ForeColor = Color.FromArgb(255, 245, 245, 245);
             lblTempo.ForeColor = Color.FromArgb(255, 245, 245, 245);
@@ -266,14 +222,11 @@ namespace a_mimir
             lblSegundos.ForeColor = Color.FromArgb(255, 245, 245, 245);
             lblTimer.ForeColor = Color.FromArgb(255, 245, 245, 245);
             lblNomePrograma.ForeColor = Color.FromArgb(255, 245, 245, 245);
-
             rbDesligar.ForeColor = Color.FromArgb(255, 245, 245, 245);
             rbReiniciar.ForeColor = Color.FromArgb(255, 245, 245, 245);
             rbLogoff.ForeColor = Color.FromArgb(255, 245, 245, 245);
             rbHinernar.ForeColor = Color.FromArgb(255, 245, 245, 245);
 
-            btnIniciar.BackgroundColor = Color.FromArgb(255, 33, 49, 79);
-            btnParar.BackgroundColor = Color.FromArgb(255, 110, 28, 28);
         }
 
         public void light_theme()
@@ -287,8 +240,6 @@ namespace a_mimir
                 TextShade.WHITE
             );
 
-            //--------------------------------------------------------------------------
-
             pnlPai.BackColor = Color.FromArgb(255, 255, 255, 255);
             pnlPai.color = Color.DodgerBlue;
             pnlLinhaAcao.BackColor = Color.FromArgb(255, 240, 240, 240);
@@ -296,6 +247,8 @@ namespace a_mimir
             pnlLinhaTempo.BackColor = Color.FromArgb(255, 240, 240, 240);
             pnlDivisor.BackColor = Color.FromArgb(255, 240, 240, 240);
             pnlDivisorTempo.BackColor = Color.FromArgb(255, 240, 240, 240);
+            btnIniciar.BackgroundColor = Color.CornflowerBlue;
+            btnParar.BackgroundColor = Color.Brown;
 
             lblAcao.ForeColor = Color.FromArgb(255, 32, 32, 32);
             lblTempo.ForeColor = Color.FromArgb(255, 32, 32, 32);
@@ -305,15 +258,10 @@ namespace a_mimir
             lblSegundos.ForeColor = Color.FromArgb(255, 32, 32, 32);
             lblTimer.ForeColor = Color.FromArgb(255, 32, 32, 32);
             lblNomePrograma.ForeColor = Color.WhiteSmoke;
-
             rbDesligar.ForeColor = Color.FromArgb(255, 32, 32, 32);
             rbReiniciar.ForeColor = Color.FromArgb(255, 32, 32, 32);
             rbLogoff.ForeColor = Color.FromArgb(255, 32, 32, 32);
             rbHinernar.ForeColor = Color.FromArgb(255, 32, 32, 32);
-
-            btnIniciar.BackgroundColor = Color.CornflowerBlue;
-
-            btnParar.BackgroundColor = Color.Brown;
         }
     }
 }
