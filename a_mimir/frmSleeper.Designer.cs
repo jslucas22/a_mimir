@@ -62,8 +62,6 @@
             this.tmrAcao = new System.Windows.Forms.Timer(this.components);
             this.icoNotificacao = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmMenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmExecutaAcao = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmCanceleAcao = new System.Windows.Forms.ToolStripMenuItem();
             this.cmFechar = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAlteraTema)).BeginInit();
@@ -460,25 +458,9 @@
             // cmMenuNotificacoes
             // 
             this.cmMenuNotificacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmExecutaAcao,
-            this.cmCanceleAcao,
             this.cmFechar});
             this.cmMenuNotificacoes.Name = "cmMenuNotificacoes";
-            this.cmMenuNotificacoes.Size = new System.Drawing.Size(233, 70);
-            // 
-            // cmExecutaAcao
-            // 
-            this.cmExecutaAcao.Name = "cmExecutaAcao";
-            this.cmExecutaAcao.Size = new System.Drawing.Size(232, 22);
-            this.cmExecutaAcao.Text = "Executar Ação Imediatamente";
-            this.cmExecutaAcao.Click += new System.EventHandler(this.cmExecutaAcao_Click);
-            // 
-            // cmCanceleAcao
-            // 
-            this.cmCanceleAcao.Name = "cmCanceleAcao";
-            this.cmCanceleAcao.Size = new System.Drawing.Size(232, 22);
-            this.cmCanceleAcao.Text = "Cancelar Ação";
-            this.cmCanceleAcao.Click += new System.EventHandler(this.cmCanceleAcao_Click);
+            this.cmMenuNotificacoes.Size = new System.Drawing.Size(181, 48);
             // 
             // cmFechar
             // 
@@ -549,8 +531,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnAlteraTema;
         private System.Windows.Forms.NotifyIcon icoNotificacao;
         private System.Windows.Forms.ContextMenuStrip cmMenuNotificacoes;
-        private System.Windows.Forms.ToolStripMenuItem cmExecutaAcao;
-        private System.Windows.Forms.ToolStripMenuItem cmCanceleAcao;
         private System.Windows.Forms.ToolStripMenuItem cmFechar;
     }
 }

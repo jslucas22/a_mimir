@@ -121,20 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAChJREFUOE9j
-        GAXDCvz//98BiBuIxA5QbQgAEkRThA9jGjAKhi5gYAAAJwRSuaFF4tIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE/N
-        kkEKgCAQRT1CrQrqzBmGWrpoV4suWQMjGdoouKgHgvP1f8ZB9h/EvPDR2gbLV6SULdzF8kYpVU/a7IPW
-        HUoBwtpeaLNxvlYoPaFCkmZHLATMoCXNDj8EFuxBw+M8YKBXywesnOEGFAX4bVODjRJ7c3YINbBkCGV2
-        kCHFX/kjGDsB0UyDPt+LpbAAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAC1EQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv
@@ -213,6 +199,20 @@
         AQBgLN42vHfQlK+d08S2Yb2DAMBYvM0cOC1fO+d4gAGAMQAAAMYAAAAYAwAAYAwAAIAxAAAAxgAAABgD
         AABgDAAAgDEAAADGAAAAGAMAxhgAMMYAgDF2LQGYqB3VTmpfetBZLaQFAICx2APQTrtbu0cb4EH3ardp
         KQDAWOwBaFIxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGPW+1/gH3FDqDnz3QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAChJREFUOE9j
+        GAXDCvz//98BiBuIxA5QbQgAEkRThA9jGjAKhi5gYAAAJwRSuaFF4tIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE/N
+        kkEKgCAQRT1CrQrqzBmGWrpoV4suWQMjGdoouKgHgvP1f8ZB9h/EvPDR2gbLV6SULdzF8kYpVU/a7IPW
+        HUoBwtpeaLNxvlYoPaFCkmZHLATMoCXNDj8EFuxBw+M8YKBXywesnOEGFAX4bVODjRJ7c3YINbBkCGV2
+        kCHFX/kjGDsB0UyDPt+LpbAAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="controlHead.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
