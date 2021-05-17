@@ -60,7 +60,6 @@ namespace a_mimir
             _ = horas > 23 ? txtHoras.Text = "23" : "0";
             _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
             _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
-
         }
 
 
