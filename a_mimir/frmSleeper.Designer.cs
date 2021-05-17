@@ -78,7 +78,7 @@
             this.pnlPai.BackColor = System.Drawing.Color.White;
             this.pnlPai.BorderRadius = 5;
             this.pnlPai.BottomSahddow = true;
-            this.pnlPai.color = System.Drawing.Color.DodgerBlue;
+            this.pnlPai.color = System.Drawing.Color.RoyalBlue;
             this.pnlPai.Controls.Add(this.btnAlteraTema);
             this.pnlPai.Controls.Add(this.lblSegundos);
             this.pnlPai.Controls.Add(this.lblMinutos);
@@ -430,7 +430,7 @@
             // lblNomePrograma
             // 
             this.lblNomePrograma.AutoSize = true;
-            this.lblNomePrograma.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F);
+            this.lblNomePrograma.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomePrograma.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblNomePrograma.Location = new System.Drawing.Point(3, 4);
             this.lblNomePrograma.Name = "lblNomePrograma";
