@@ -283,7 +283,7 @@
             // lblTempo
             // 
             this.lblTempo.AutoSize = true;
-            this.lblTempo.Location = new System.Drawing.Point(368, 23);
+            this.lblTempo.Location = new System.Drawing.Point(367, 18);
             this.lblTempo.Name = "lblTempo";
             this.lblTempo.Size = new System.Drawing.Size(39, 13);
             this.lblTempo.TabIndex = 13;
@@ -309,7 +309,7 @@
             // lblTemporizador
             // 
             this.lblTemporizador.AutoSize = true;
-            this.lblTemporizador.Location = new System.Drawing.Point(152, 23);
+            this.lblTemporizador.Location = new System.Drawing.Point(153, 18);
             this.lblTemporizador.Name = "lblTemporizador";
             this.lblTemporizador.Size = new System.Drawing.Size(85, 13);
             this.lblTemporizador.TabIndex = 7;
@@ -365,7 +365,7 @@
             // lblAcao
             // 
             this.lblAcao.AutoSize = true;
-            this.lblAcao.Location = new System.Drawing.Point(32, 23);
+            this.lblAcao.Location = new System.Drawing.Point(31, 18);
             this.lblAcao.Name = "lblAcao";
             this.lblAcao.Size = new System.Drawing.Size(34, 13);
             this.lblAcao.TabIndex = 2;
