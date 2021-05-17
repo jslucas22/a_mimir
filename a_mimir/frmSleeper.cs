@@ -57,11 +57,6 @@ namespace a_mimir
             _ = txtHoras.Text.Count() == 0 ? txtHoras.Text = "0" : "";
             _ = txtMinutos.Text.Count() == 0 ? txtMinutos.Text = "0" : "";
             _ = txtSegundos.Text.Count() == 0 ? txtSegundos.Text = "0" : "";
-
-            horas = Convert.ToInt32(txtHoras.Text);
-            minutos = Convert.ToInt32(txtMinutos.Text);
-            segundos = Convert.ToInt32(txtSegundos.Text);
-
             _ = horas > 23 ? txtHoras.Text = "23" : "0";
             _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
             _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
