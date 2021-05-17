@@ -1,11 +1,8 @@
 ﻿using MaterialSkin;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -21,9 +18,8 @@ namespace a_mimir
         public frmSleeper()
         {
             InitializeComponent();
-            light_theme();
 
-            //----------------------------------------------------------------------------
+            tema_claro();
 
             lstRadio.Add(rbDesligar);
             lstRadio.Add(rbReiniciar);
@@ -35,7 +31,7 @@ namespace a_mimir
         {
             if (lblNomePrograma.Text == "A mimir")
             {
-                dark_theme();
+                tema_escuro();
 
                 btnAlteraTema.Image = Properties.Resources.sun_60px;
                 lblNomePrograma.Text = "A mimir | zZzZzZz";
@@ -43,7 +39,7 @@ namespace a_mimir
             }
             else
             {
-                light_theme();
+                tema_claro();
 
                 btnAlteraTema.Image = Properties.Resources.night;
                 lblNomePrograma.Text = "A mimir";
@@ -191,7 +187,7 @@ namespace a_mimir
             }
         }
 
-        public void dark_theme()
+        public void tema_escuro()
         {
             MaterialSkinManager MSM = MaterialSkinManager.Instance;
             MSM.Theme = MaterialSkinManager.Themes.DARK;
@@ -201,8 +197,6 @@ namespace a_mimir
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
-
-            //--------------------------------------------------------------------------
 
             pnlPai.BackColor = Color.FromArgb(255, 20, 29, 38);
             pnlPai.color = Color.FromArgb(36, 52, 71);
@@ -229,7 +223,7 @@ namespace a_mimir
 
         }
 
-        public void light_theme()
+        public void tema_claro()
         {
             MaterialSkinManager MSM = MaterialSkinManager.Instance;
             MSM.Theme = MaterialSkinManager.Themes.LIGHT;

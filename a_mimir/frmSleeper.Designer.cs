@@ -502,6 +502,7 @@
             this.Name = "frmSleeper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A mimir zZzZ";
+            this.Load += new System.EventHandler(this.frmSleeper_Load);
             this.Move += new System.EventHandler(this.frmSleeper_Move);
             this.pnlPai.ResumeLayout(false);
             this.pnlPai.PerformLayout();
