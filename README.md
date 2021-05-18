@@ -5,8 +5,7 @@
  ## Oque é isso ? 🤔
  
  O "A mimir", é um software destinado para aqueles que</br>
- ao ir dormirem, deixam seus computadores ligados com</br>
- um filme, música etc.
+ ao ir dormir, mantém seus computadores ligados com algo tocando,</br>
  
  O que o "A mimir" faz é executar uma ação selecionada</br>
  pelo usuário em um determinado período de tempo (horas : minutos : segundos ) 
