@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-
 namespace a_mimir
 {
     public partial class frmSleeper : Form
@@ -61,8 +60,6 @@ namespace a_mimir
             _ = minutos > 59 ? txtMinutos.Text = "59" : "0";
             _ = segundos > 59 ? txtSegundos.Text = "59" : "0";
         }
-
-
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
