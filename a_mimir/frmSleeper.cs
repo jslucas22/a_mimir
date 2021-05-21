@@ -18,8 +18,6 @@ namespace a_mimir
         {
             InitializeComponent();
 
-            tema_claro();
-
             lstRadio.Add(rbDesligar);
             lstRadio.Add(rbReiniciar);
             lstRadio.Add(rbLogoff);
